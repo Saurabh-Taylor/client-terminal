@@ -39,7 +39,7 @@ const Terminal: React.FC<TerminalProps> = ({ isOpen, onClose }) => {
       fitAddon.fit();
 
       // Connect to WebSocket server
-      socketRef.current = io('http://localhost:3000');
+      socketRef.current = io(String(import.meta.env.VITE_SOCKET_URL));
 
       socketRef.current.on('connect', () => {
         socketRef.current.emit('start-session');
