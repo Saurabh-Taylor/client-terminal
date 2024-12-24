@@ -5,6 +5,9 @@ import Terminal from './components/Terminal';
 function App() {
   const [isTerminalOpen, setIsTerminalOpen] = useState(false);
 
+  console.log(import.meta.env);
+  
+
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col">
       {/* Top Content Area */}
